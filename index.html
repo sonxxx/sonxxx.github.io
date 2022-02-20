@@ -5,11 +5,79 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chrome</title>
+  <script src="https://kit.fontawesome.com/d3999bd299.js" crossorigin="anonymous"></script>
+  <!-- <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script> -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+  <link rel="stylesheet" href="css/index.css">
+  <title>VanillaJS-Chrome</title>
 </head>
 
 <body>
-  <h1>크롬 만들기 프로젝트</h1>
+  <div id="wrap" style="overflow: hidden;">
+
+    <!-- weather_api -->
+    <header id="header">
+      <div id="weather" class="hidden">
+        <h1>
+          <span></span>
+          <span></span>
+        </h1>
+      </div>
+    </header>
+
+    <!-- etc_api, clock, login_form, todo_list -->
+    <section id="main">
+      <div id="left_aside">
+      </div>
+
+      <div id="center_menu">
+        <h1 id="clock"></h1>
+
+        <form id="login_form" class="hidden">
+          <input id="login_box" type="text" placeholder="What's your name?" required maxlength="10">
+          <input id="login_btn" type="submit" value="Login">
+        </form>
+
+        <h2 id="greeting" class="hidden"></h2>
+      </div>
+
+      <div id="right_aside">
+        <div id="todo_all" class="hidden">
+          <h1>To-Do List</h1>
+          <form id="todo_form">
+            <input id="todo_box" type="text" placeholder="Please enter today's to-do.">
+          </form>
+
+          <ul id="todo_list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- logo, randomColor -->
+    <footer id="footer">
+      <div id="logo">
+        <a href="http://youtube.com"><i class="fa fa-brands fa-youtube"></i></a>
+        <a href="http://twitter.com"><i class="fa fa-brands fa-twitter"></i></a>
+        <a href="http://google.com"><i class="fa fa-brands fa-google"></i></a>
+      </div>
+
+      <div id="quote" class="hidden">
+        <span></span><br>
+        <span></span>
+      </div>
+
+      <div id="imgBtn"></div>
+    </footer>
+
+  </div>
+
+  <script defer src="js/clock.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/todo.js"></script>
+  <script src="js/weather.js"></script>
+  <script src="js/quotes.js"></script>
+  <script src="js/background.js"></script>
 </body>
 
 </html>
