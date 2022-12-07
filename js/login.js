@@ -1,6 +1,7 @@
 const loginForm = document.querySelector("#login_form");
 const loginInput = loginForm.querySelector("input");
 const greeting = document.querySelector("#greeting");
+const logoutBtn = document.querySelector("#logoutBtn");
 
 const todo_all = document.querySelector("#todo_all");
 const weather = document.querySelector("#weather");
@@ -18,8 +19,15 @@ function loginSubmit(event){
   printGreeting(userName);
 }
 
+function logout(){
+  localStorage.removeItem('userName');
+  // loginForm.classList.add(HIDDEN_CLASSNAME);
+  window.location.reload();
+}
+
 function printGreeting(userName){
   greeting.innerText = `Hello, ${userName}\nHave a nice day ! 🥰`;
+  logoutBtn.classList.remove(HIDDEN_CLASSNAME);
   greeting.classList.remove(HIDDEN_CLASSNAME);
   todo_all.classList.remove(HIDDEN_CLASSNAME);
   weather.classList.remove(HIDDEN_CLASSNAME);
