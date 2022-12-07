@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/d3999bd299.js" crossorigin="anonymous"></script>
   <!-- <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script> -->
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+  <!-- <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"> -->
   <link rel="stylesheet" href="css/index.css">
   <title>VanillaJS-Chrome</title>
 </head>
@@ -40,6 +40,11 @@
         </form>
 
         <h2 id="greeting" class="hidden"></h2>
+        <div>
+          <button id="logoutBtn" class="hidden" onclick="logout()">
+            ✖
+          </button>
+        </div>
       </div>
 
       <div id="right_aside">
@@ -71,6 +76,7 @@
     </footer>
 
   </div>
+
 
   <script defer src="js/clock.js"></script>
   <script src="js/login.js"></script>
